@@ -388,7 +388,6 @@ while run:
         player = Player(675, 375)
         hp = max_hp
 
-
     health_bar(hp, max_hp)
     draw_text(f"enemies alive: {enemies_alive}", score_font, (200, 200, 30), 1100, 30)
     draw_text(f"level: {level}", score_font, (200, 200, 30), 1100, 70)
@@ -399,6 +398,7 @@ while run:
         enemy_counter = next_level(enemies_in_level)
         enemies_in_level = enemy_counter
         level += 1
+        bullet_group.empty()
         x_distance, y_distance = 0, 0
         background(x_distance, y_distance)
         player = Player(675, 375)
